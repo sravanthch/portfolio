@@ -5,17 +5,18 @@ import { motion } from "framer-motion";
 
 const education = [
     {
-        school: "University of Technology",
-        degree: "Bachelor of Science in Computer Science",
+        school: "JNTU College Of Engineering Hyderabad",
+        degree: "Bachelors",
         year: "2019 - 2023",
-        description: "Graduated with honors. Focused on Software Engineering and Artificial Intelligence."
+        course: "Computer Science Engineering - 8.3 CGPA"
     },
     {
-        school: "Tech High School",
-        degree: "High School Diploma",
-        year: "2015 - 2019",
-        description: "Specialized in Mathematics and Physics. Lead of the coding club."
-    }
+        school: "Narayana Junior College",
+        degree: "Intermediate",
+        year: "2017 - 2019",
+        course: "Mathematics Physics and Chemistry (MPC) - 95%"
+    },
+
 ];
 
 export function EducationSection() {
@@ -43,7 +44,6 @@ export function EducationSection() {
                             viewport={{ once: true }}
                             className="relative pl-8 md:pl-12"
                         >
-                            {/* Dot */}
                             <div className="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-background" />
 
                             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
@@ -51,7 +51,7 @@ export function EducationSection() {
                                 <span className="text-sm text-muted-foreground font-medium bg-muted px-2 py-1 rounded">{item.year}</span>
                             </div>
                             <h4 className="text-lg font-medium text-primary mb-2">{item.degree}</h4>
-                            <p className="text-muted-foreground">{item.description}</p>
+                            <p className="text-muted-foreground">{item.course}</p>
                         </motion.div>
                     ))}
                 </div>
