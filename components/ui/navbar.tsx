@@ -6,10 +6,12 @@ import { cn } from "@/lib/utils";
 import { Menu, X, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import { ContactDialog } from "@/components/contact-dialog";
 
 const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
     { name: "Education", href: "#education" },
     { name: "Projects", href: "#projects" },
 ];
@@ -17,6 +19,7 @@ const navItems = [
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isContactOpen, setIsContactOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -52,7 +55,9 @@ export function Navbar() {
                             {item.name}
                         </Link>
                     ))}
-                    <Button size="sm">Contact Me</Button>
+                    <Button size="sm" onClick={() => setIsContactOpen(true)}>
+                        Contact Me
+                    </Button>
                 </nav>
 
                 {/* Mobile Toggle */}
@@ -84,13 +89,22 @@ export function Navbar() {
                                     {item.name}
                                 </Link>
                             ))}
-                            <Button size="sm" className="w-full">
+                            <Button
+                                size="sm"
+                                className="w-full"
+                                onClick={() => {
+                                    setIsContactOpen(true);
+                                    setIsMobileMenuOpen(false);
+                                }}
+                            >
                                 Contact Me
                             </Button>
                         </div>
                     </motion.div>
                 )}
             </AnimatePresence>
+
+            <ContactDialog open={isContactOpen} onOpenChange={setIsContactOpen} />
         </header>
     );
 }

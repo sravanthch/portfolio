@@ -6,32 +6,33 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
+import { ContactDialog } from "@/components/contact-dialog";
+import { useState } from "react";
+
 export function HomeSection() {
+    const [isContactOpen, setIsContactOpen] = useState(false);
+
     return (
         <SectionContainer id="home" className="min-h-[calc(100vh-4rem)] flex items-center">
             <div className="grid grid-cols-1 md:grid-cols-2 items-center w-full">
-                {/* Left Side - Image Placeholder */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="ml-20 mt-7 order-last md:order-first relative md:w-90 md:h-90 bg-muted rounded-2xl overflow-hidden border border-border shadow-xl flex items-center justify-center group"
+                    className="mt-7 ml-0 md:ml-20 order-last md:order-first relative w-[280px] h-[280px] md:w-[360px] md:h-[360px] bg-muted rounded-2xl overflow-hidden border border-border shadow-xl flex items-center justify-center group"
                 >
-                    {/* Placeholder Illustration / Text */}
-                    <div>
-                            <Image
-                                src="/images/Kashmir.jpg"
-                                alt="Sravanth profile picture"
-                                fill
-                                className="object-cover"
-                                priority
-                            />
-                    </div>
-
-
+                    <Image
+                        src="/images/Kashmir.jpg"
+                        alt="Sravanth profile picture"
+                        fill
+                        className="object-cover"
+                        priority
+                        sizes="(max-width: 768px) 100vw, 360px"
+                    />
 
                     <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-transparent pointer-events-none" />
                 </motion.div>
+
 
                 <motion.div
                     initial={{ opacity: 0, x: 50 }}
@@ -49,15 +50,25 @@ export function HomeSection() {
                     </div>
 
                     <div className="flex flex-wrap gap-4">
-                        <Button size="lg" className="group">
-                            <a href="#projects">View Projects</a>
+                        <a href="#projects">
+                            <Button size="lg" className="group">
+                            View Projects
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </Button>
-                        <Button size="lg" variant="outline">
+                        </a>
+                        <Button
+                            size="lg"
+                            variant="outline"
+                            onClick={() => setIsContactOpen(true)}
+                        >
                             Contact Me
                         </Button>
                     </div>
 
+                    <ContactDialog
+                        open={isContactOpen}
+                        onOpenChange={setIsContactOpen}
+                    />
 
                 </motion.div>
             </div>

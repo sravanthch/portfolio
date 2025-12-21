@@ -4,6 +4,7 @@ import { SectionContainer } from "@/components/ui/section-container";
 import { motion } from "framer-motion";
 
 export function AboutSection() {
+    const skills = ["React", "Next.js", "Java","Python","Node.js","Express","Spring Boot","SQL", "PostgreSQL","MongoDB", "Git","Docker", "Kubernetes","AWS","Postman","SharePoint","HTML/CSS","Tailwind CSS","JavaScript","TypeScript"];
     return (
         <SectionContainer id="about" className="bg-muted/30">
             <motion.div
@@ -19,11 +20,11 @@ export function AboutSection() {
                 </div>
 
                 <p className="text-lg text-muted-foreground text-center leading-relaxed">
-                    I am a dedicated developer with a strong foundation in computer science and a knack for creating intuitive, dynamic user interfaces. My journey began with a curiosity for how things work on the web, which has since evolved into a professional pursuit of building robust applications. I thrive in collaborative environments and am always eager to learn new technologies to solve real-world problems.
+                    I hold a B.Tech degree in Computer Science and am a passionate full-stack developer. Coding has always been a strong interest of mine, and I have built multiple end-to-end full-stack projects. I am highly motivated to continuously learn new technologies and enhance my skill set.
                 </p>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-                    {["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Git", "Framer Motion"].map((skill, index) => (
+                    {skills.map((skill, index) => (
                         <motion.div
                             key={skill}
                             initial={{ opacity: 0, scale: 0.9 }}
