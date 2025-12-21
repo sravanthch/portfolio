@@ -3,6 +3,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, Linkedin, Mail, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 
 interface ContactDialogProps {
     open: boolean;
@@ -10,7 +12,15 @@ interface ContactDialogProps {
 }
 
 export function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
-    return (
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
+
+    return createPortal(
         <AnimatePresence>
             {open && (
                 <>
@@ -90,6 +100,7 @@ export function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
                     </motion.div>
                 </>
             )}
-        </AnimatePresence>
+        </AnimatePresence>,
+        document.body
     );
 }

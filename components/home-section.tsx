@@ -52,9 +52,9 @@ export function HomeSection() {
                     <div className="flex flex-wrap gap-4">
                         <a href="#projects">
                             <Button size="lg" className="group">
-                            View Projects
-                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                        </Button>
+                                View Projects
+                                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                            </Button>
                         </a>
                         <Button
                             size="lg"
