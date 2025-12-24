@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const experiences = [
     {
         company: "Berkadia",
-        role: "AssociateSoftware Engineer",
+        role: "Associate Software Engineer",
         duration: "Jan 2023 - Nov 2023",
         description: [
             "Provided production support during the project launch, collaborating with users to resolve bugs",
@@ -15,7 +15,7 @@ const experiences = [
             "Implemented document upload and download workflows by integrating Amazon S3, using pre-signed URLs",
             "Implemented a form-locking mechanism, preventing simultaneous edits improving data integrity",
             "Designed and deployed real-time dashboards for tracking requests and processing status",
-"Developed the “Export to Excel” feature for the dashboard data, enhancing the user experience"
+            "Developed the “Export to Excel” feature for the dashboard data, enhancing the user experience"
         ]
     },
 ];
@@ -61,6 +61,64 @@ export function ExperienceSection() {
                         </motion.div>
                     ))}
                 </div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    className="pt-12"
+                >
+                    <div className="text-center mb-8">
+                        <h3 className="text-2xl font-bold tracking-tight mb-4">Certifications and Achievements</h3>
+                        <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <div className="bg-card p-6 rounded-xl border shadow-sm hover:shadow-md transition-shadow">
+                            <h4 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                                Certifications
+                            </h4>
+                            <ul className="space-y-4">
+                                <li>
+                                    <div className="flex flex-col">
+                                        <span className="font-medium">AWS Certified Cloud Practitioner</span>
+                                        <a
+                                            href="https://www.credly.com/badges/eb217161-739d-4dda-9be1-a23b6e7da554"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-sm text-muted-foreground hover:text-primary hover:underline transition-colors mt-1"
+                                        >
+                                            View Certificate ↗
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="bg-card p-6 rounded-xl border shadow-sm hover:shadow-md transition-shadow">
+                            <h4 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                                Achievements
+                            </h4>
+                            <ul className="space-y-4">
+                                <li>
+                                    <div className="flex flex-col">
+                                        <span className="font-medium">Winner – Hackathon (Vertical-Level Conference, Berkadia) for building an innovative solution
+                                            under time constraints</span>
+                                        <a
+                                            href="#"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-sm text-muted-foreground hover:text-primary hover:underline transition-colors mt-1"
+                                        >
+                                            View Details ↗
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </motion.div>
             </motion.div>
         </SectionContainer>
     );
