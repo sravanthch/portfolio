@@ -7,7 +7,7 @@ const experiences = [
     {
         company: "Berkadia",
         role: "Associate Software Engineer",
-        duration: "Jan 2023 - Nov 2023",
+        duration: "Jul 2023 - Nov 2025",
         description: [
             "Provided production support during the project launch, collaborating with users to resolve bugs",
             "Designed  a user interface enabling users to import documents and input metadata.",
@@ -106,7 +106,7 @@ export function ExperienceSection() {
                                         <span className="font-medium">Winner – Hackathon (Vertical-Level Conference, Berkadia) for building an innovative solution
                                             under time constraints</span>
                                         <a
-                                            href="#"
+                                            href="https://www.linkedin.com/in/sravanth-ch/overlay/1766618886912/single-media-viewer/?profileId=ACoAADkm6JABEMUX-RN5Qj65RNf_K7s2D1QHXiI"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-sm text-muted-foreground hover:text-primary hover:underline transition-colors mt-1"
