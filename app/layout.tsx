@@ -14,8 +14,41 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sravanth | Portfolio",
-  description: "Full Stack Developer Portfolio",
+  metadataBase: new URL("https://sravanthworks.netlify.app"),
+  title: {
+    default: "Sravanth | Full Stack Developer",
+    template: "%s | Sravanth",
+  },
+  description: "Portfolio of Sravanth, a Full Stack Developer specializing in modern web technologies.",
+  keywords: ["Full Stack Developer", "React", "Next.js", "Portfolio", "Sravanth", "Web Development"],
+  authors: [{ name: "Sravanth" }],
+  creator: "Sravanth",
+  publisher: "Sravanth",
+  openGraph: {
+    title: "Sravanth | Full Stack Developer",
+    description: "Portfolio of Sravanth, a Full Stack Developer specializing in modern web technologies.",
+    url: "https://sravanthworks.netlify.app",
+    siteName: "Sravanth Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sravanth | Full Stack Developer",
+    description: "Portfolio of Sravanth, a Full Stack Developer specializing in modern web technologies.",
+    creator: "@sravanth", // Replace with actual handle if available
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
