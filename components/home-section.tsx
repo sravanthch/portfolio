@@ -22,7 +22,7 @@ export function HomeSection() {
                     className="mt-7 ml-0 md:ml-20 order-last md:order-first relative w-[280px] h-[280px] md:w-[360px] md:h-[360px] bg-muted rounded-2xl overflow-hidden border border-border shadow-xl flex items-center justify-center group"
                 >
                     <Image
-                        src="/images/Kashmir.jpg"
+                        src="/images/LinkedinDp.png"
                         alt="Sravanth profile picture"
                         fill
                         className="object-cover"
