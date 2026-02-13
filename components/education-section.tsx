@@ -16,6 +16,12 @@ const education = [
         year: "2017 - 2019",
         course: "Mathematics Physics and Chemistry (MPC) - 95%"
     },
+    {
+        school: "Narayana E-Techno School",
+        degree: "SSC",
+        year: "2016 - 2017",
+        course: "10th Class - 9.0 CGPA"
+    },
 
 ];
 
