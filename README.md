@@ -3,6 +3,9 @@
 A responsive personal portfolio website showcasing professional details such as Home, About, Education, Skills, and Projects.  
 The Projects section is dynamically powered by a Spring Boot backend to demonstrate backend and REST API experience.
 
+## Deployed Link : 
+https://sravanthworks.netlify.app/
+
 ## Features
 - Responsive portfolio UI
 - Sections: Home, About, Education, Skills, Projects
