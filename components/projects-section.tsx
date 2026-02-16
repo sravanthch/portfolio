@@ -28,10 +28,18 @@ const INITIAL_PROJECTS: Project[] = [
         projectId: "2",
         title: "Login Authentication",
         description: "An end-to-end authentication system that provides secure user login and signup functionality.It ensures data integrity through duplicate email detection, password hashing, and Joi-based input validation.",
-        techStack: ["React", "JavaScript", "Node.js", "Express", "HTML/CSS", "PostgreSQL"],
+        techStack: ["React", "JavaScript", "Node.js", "Express", "HTML/CSS", "PostgreSQL","Joi Validation"],
         githubUrl: "https://github.com/sravanthch/authentication-frontend",
         liveUrl: "https://whimsical-griffin-cf1e2e.netlify.app/"
-    }
+    },
+    {
+        projectId: "3",
+        title: "Image Processing",
+        description: "Developed a full-stack processor that transforms RGB photos into grayscale sketches by analyzing pixels via edge detection. Implemented hybrid architecture to orchestrate inter-process interaction.",
+        techStack: ["Java", "Python", "Spring Boot", "Next.js", "Process-Builder", "OpenCV","Polyglot MVC Architecture"],
+        githubUrl: "https://github.com/sravanthch/imageProcessing-frontend",
+        liveUrl: ""
+    },
 ];
 
 export function ProjectsSection() {
