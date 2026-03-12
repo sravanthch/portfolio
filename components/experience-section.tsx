@@ -4,6 +4,7 @@ import { SectionContainer } from "@/components/ui/section-container";
 import { motion } from "framer-motion";
 
 const experiences = [
+
     {
         company: "Berkadia",
         role: "Associate Software Engineer",
@@ -17,19 +18,19 @@ const experiences = [
             "Designed and deployed real-time dashboards for tracking requests and processing status",
             "Developed the “Export to Excel” feature for the dashboard data, enhancing the user experience"
         ]
-    },
-    {
-        company: "Vilindha Technologies",
-        role: "Junior Developer",
-        duration: "Aug 2022 - Jun 2023",
-        description: [
-            "Built an NLP-based system to automatically classify and route customer support tickets to appropriate teams, reducing manual triage and improving response time.",
-            "Developed backend services using Java (Spring Boot) to handle ticket submission, processing, and system integration.",
-            "Performed large-scale data cleaning and preprocessing, handling missing values and outliers to prepare datasets for machine learning model training.",
-            "Trained and integrated machine learning models to improve accuracy of ticket classification and routing.",
-            "Designed a responsive UI to visualize ticket classification and request metrics.",
-        ]
-    },
+    }
+    // {
+    //     company: "Vilindha Technologies",
+    //     role: "Junior Developer",
+    //     duration: "Aug 2022 - Jun 2023",
+    //     description: [
+    //         "Built an NLP-based system to automatically classify and route customer support tickets to appropriate teams, reducing manual triage and improving response time.",
+    //         "Developed backend services using Java (Spring Boot) to handle ticket submission, processing, and system integration.",
+    //         "Performed large-scale data cleaning and preprocessing, handling missing values and outliers to prepare datasets for machine learning model training.",
+    //         "Trained and integrated machine learning models to improve accuracy of ticket classification and routing.",
+    //         "Designed a responsive UI to visualize ticket classification and request metrics.",
+    //     ]
+    // },
 ];
 
 export function ExperienceSection() {
