@@ -3,9 +3,7 @@
 import { SectionContainer } from "@/components/ui/section-container";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Loader2 } from "lucide-react";
-import { useEffect, useState } from "react";
-
+import { ExternalLink, Github } from "lucide-react";
 interface Project {
     projectId: string;
     title: string;
@@ -40,35 +38,34 @@ const INITIAL_PROJECTS: Project[] = [
         githubUrl: "https://github.com/sravanthch/imageProcessing-frontend",
         liveUrl: ""
     },
+    {
+        projectId: "1cfe16f6",
+        title: "PDF Summarizer (RAG)",
+        description: "A PDF summarization system built by a Retrieval-Augmented Generation (RAG) architecture for context-aware Q&A.",
+        techStack: ["Next.js", "Qdrant DB", "Clerk Auth", "Langchain", "TypeScript", "CSS"],
+        githubUrl: "https://github.com/sravanthch/Pdf-Rag",
+        liveUrl: null
+    },
+    {
+        projectId: "0aa9024b",
+        title: "Tic Tac Toe",
+        description: "A simple and interactive Tic Tac Toe game with a clean and intuitive user interface.",
+        techStack: ["JavaScript", "HTML", "CSS"],
+        githubUrl: "https://github.com/sravanthch/TicTacToe",
+        liveUrl: "https://unique-crostata-28d7b3.netlify.app/"
+    },
+    {
+        projectId: "693a00dc",
+        title: "CRUD Management System",
+        description: "A RESTful Backend CRUD API project designed to manage resources efficiently using standard HTTP methods.",
+        techStack: ["Springboot", "Java", "MongoDB"],
+        githubUrl: "https://github.com/sravanthch/springboot-mongoDB",
+        liveUrl: null
+    }
 ];
 
 export function ProjectsSection() {
-    const [projects, setProjects] = useState<Project[]>(INITIAL_PROJECTS);
-    const [isLoading, setIsLoading] = useState(true);
-    const API_URL = `${process.env.NEXT_PUBLIC_PROJECTS_API}/projects`;
-
-    useEffect(() => {
-        const fetchProjects = async () => {
-            console.log("Fetching projects from:", API_URL);
-            if (!API_URL) {
-                console.warn("API_URL is not defined");
-                setIsLoading(false);
-                return;
-            }
-
-            try {
-                const response = await fetch(API_URL);
-                const data = await response.json();
-                setProjects(prev => [...prev, ...data]);
-            } catch (error) {
-                console.error("Error fetching projects:", error);
-            } finally {
-                setIsLoading(false);
-            }
-        };
-
-        fetchProjects();
-    }, [API_URL]);
+    const projects = INITIAL_PROJECTS;
 
     return (
         <SectionContainer id="projects" className="bg-muted/30">
@@ -137,11 +134,6 @@ export function ProjectsSection() {
                         </motion.div>
                     ))}
 
-                    {isLoading && (
-                        <div className="flex items-center justify-center p-12 col-span-1 md:col-span-2 lg:col-span-3">
-                            <Loader2 className="h-8 w-8 animate-spin text-primary" />
-                        </div>
-                    )}
                 </div>
             </motion.div>
         </SectionContainer>
