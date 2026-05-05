@@ -36,7 +36,7 @@ const INITIAL_PROJECTS: Project[] = [
         description: "Developed a full-stack processor that transforms RGB photos into grayscale sketches by analyzing pixels via edge detection. Implemented hybrid architecture to orchestrate inter-process interaction.",
         techStack: ["Java", "Python", "Spring Boot", "Next.js", "Process-Builder", "OpenCV","Polyglot MVC Architecture"],
         githubUrl: "https://github.com/sravanthch/imageProcessing-frontend",
-        liveUrl: ""
+        liveUrl: "https://imageprocesser.netlify.app/"
     },
     {
         projectId: "1cfe16f6",
