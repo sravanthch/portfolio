@@ -20,7 +20,7 @@ const INITIAL_PROJECTS: Project[] = [
         description: "An AI-powered web application that allows users to chat normally or upload a PDF and ask questions based on its content.",
         techStack: ["React", "TypeScript", "Vite", "OpenAI API (gpt-4o-mini)", "Tailwind CSS", "pdfjs-dist"],
         githubUrl: "https://github.com/sravanthch/Personal-AI-Assistant",
-        liveUrl: "https://pdfassitant.netlify.app/"
+        liveUrl: "https://smartdoxai.netlify.app/"
     },
     {
         projectId: "2",
