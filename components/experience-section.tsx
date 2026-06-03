@@ -19,6 +19,18 @@ const experiences = [
             "Developed the “Export to Excel” feature for the dashboard data, enhancing the user experience"
         ]
     }
+,
+    {
+        company: "Ally Bank",
+        role: "Software Engineer",
+        duration: "Mar 2, 2026 - Present",
+        description: [
+            "Built a Retrieval-Augmented Generation (RAG) architecture project using FastAPI enabling associates to fetch relevant articles during customer conversations or for ad-hoc queries.",
+            "Migrated the project's infrastructure from AWS Lambda to Amazon ECS to improve scalability, reliability, and operational control.",
+            "Built dashboards in Dynatrace to track logs, usage metrics, and system health for proactive monitoring.",
+            "Implemented AWS infrastructure integration using Terraform for repeatable, versioned deployments."
+        ]
+    }
     // {
     //     company: "Vilindha Technologies",
     //     role: "Junior Developer",
